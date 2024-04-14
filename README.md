@@ -1,0 +1,1 @@
+This is a FreeCodeCamp Project that uses terminal input acquired through a bash script to update a database with appointment information and customer information to simulate scheduling appointments for cusotmers.
