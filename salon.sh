@@ -9,12 +9,12 @@ then
 fi
 
 MENU () {
-#  if [[ -n $1 ]]
-#  then
-#    echo -e "\n$1"
-#  else
-#    echo -e "\nPlease request a service below"
-#  fi
+  if [[ -n $1 ]]
+  then
+    echo -e "\n$1"
+  else
+    echo -e "\nPlease request a service below"
+  fi
   echo $($PSQL "SELECT * FROM  services") | echo -e "$(sed -E 's/ /\n/g')" | while IFS="|" read -e NUMBER SERVICE
   do
     echo "$NUMBER) $SERVICE"
